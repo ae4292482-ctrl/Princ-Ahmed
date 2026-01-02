@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: bgMove 15s ease infinite;
+    color: #fff;
+}
+
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #ffd700;
+    margin-bottom: 15px;
+    animation: zoom 1.2s ease;
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffd700;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #ffd700, #00ffe7);
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffe7;
+}
+
+/* Sections */
+.section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.section h2 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+/* Social */
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    font-size: 2.2rem;
+    margin: 0 15px;
+    color: #ffd700;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ffe7;
+    transform: scale(1.4) rotate(-10deg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    margin-top: 40px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+}
